@@ -5,36 +5,39 @@
 }
 body {
   display: grid;
-  grid-template-columns: 15% 85%;
-  grid-template-areas:
-    "nav title"
-    "nav main"
-    "pie pie";
-  min-height: 100vh;
-  grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "nav" 
+      "title"
+      "main"
+      "pie";
+    min-height: 100vh;
+    grid-template-rows: auto;
 }
 nav {
   grid-area: nav;
   background-color: rgb(155, 155, 155);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 nav img {
   width: 100px;
   height: 100px;
+  border-radius: 50%;
 }
 ul {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 0;
 }
 nav ul li {
   list-style: none;
   padding-top: 15px;
+  padding-right: 10px;
 }
 header {
   grid-area: title;
@@ -53,7 +56,6 @@ main {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .card {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -63,11 +65,11 @@ main {
   align-items: center;
   text-align: center;
   border: solid 1px grey;
-  height: 300px;
+  height: 400px;
   width: 250px;
 }
 .card p {
-  height: auto;
+  height: 110px;
   background-color: rgb(158, 157, 157);
 }
 .card img {
@@ -84,29 +86,31 @@ footer {
   align-items: center;
 }
 footer div {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-@media (max-width:576px) {
+@media (min-width:992px) {
   body {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-areas:
-      "nav" 
-      "title"
-      "main"
-      "pie";
-    min-height: 100vh;
-    grid-template-rows: auto;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+    "nav title"
+    "nav main"
+    "pie pie";
+  min-height: 100vh;
+  grid-template-rows: 1fr 8fr 1fr;
 }
 nav {
+  grid-area: nav;
+  background-color: rgb(155, 155, 155);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 0;
