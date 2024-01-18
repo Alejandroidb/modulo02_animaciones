@@ -90,7 +90,7 @@ footer div {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   body {
     display: grid;
     grid-template-columns: 15% 85%;
