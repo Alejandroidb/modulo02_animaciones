@@ -67,6 +67,7 @@ main {
   border: solid 1px grey;
   height: 300px;
   width: 250px;
+  border-radius: 5%;
 }
 .info {
   height: 110px;
@@ -136,6 +137,7 @@ footer div {
     transform: rotateY(180deg);
     height: 100%;
     transition: all 0.6s ease;
+    border-radius: 5%;
   }
   .card:hover .info {
     transform: rotateY(0deg);
